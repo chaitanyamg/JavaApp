@@ -12,7 +12,7 @@ phases:
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
       - mvn clean install
       - mkdir -p /root/babu
-      - mv /root/.m2/repository/DemoPipelineJava/DemoPipelineJava/0.0.1-SNAPSHOT/DemoPipelineJava-0.0.1-SNAPSHOT.war /root/maven/
+      - mv /root/.m2/repository/DemoPipelineJava/DemoPipelineJava/0.0.1-SNAPSHOT/DemoPipelineJava-0.0.1-SNAPSHOT.war /root/babu/
   build:
     commands:
       - echo Build started on `date`
