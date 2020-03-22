@@ -1,0 +1,27 @@
+version: 0.0
+
+os: linux
+
+files:
+
+  - source: https://babu12345678.s3.amazonaws.com/target/sparkjava-hello-world-1.0.war
+
+    destination: /opt/tomcat/webapps/
+
+hooks:
+
+  BeforeInstall:
+
+    - location: scripts/install_tomcat
+     
+      timeout: 300
+
+      runas: root
+
+  AfterInstall:
+
+    - location: scripts/start_tomcat
+
+      timeout: 300
+
+      runas: root
