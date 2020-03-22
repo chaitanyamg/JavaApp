@@ -11,7 +11,7 @@ phases:
       - mvn clean package
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo "hai"
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
+    - target/*.war
