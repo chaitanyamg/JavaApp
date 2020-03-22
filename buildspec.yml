@@ -8,7 +8,7 @@ phases:
       - aws --version
   build:
     commands:
-      - clean package
+      - mvn clean package
   post_build:
     commands:
       - echo Build completed on `date`
